@@ -8,6 +8,24 @@
  <!-- CSS -->
 
 <style>
+#panel, .flip {
+  padding: 10px;
+  text-align: center;
+  background-color: #5a0075;
+  color: white;
+  border: solid 1px #f6de06;
+  margin: auto;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  cursor: pointer;  
+}
+
+#panel {
+  display: none;
+  cursor: auto;
+}
 body {
   /* A CSS Comment */
   background: linear-gradient(135deg, #001e22, #01434e);
@@ -50,15 +68,43 @@ header {
   text-align: center;
   z-index: 10;
 }
+
+/* Change the link and background color on hover */
+li a:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.card:hover { transform: translateY(-5px); transition: 0.3s ease; }
+.box:hover { transform: translateY(-5px); transition: 0.3s ease; }
+
 </style>
 
 </head>
 
 <body>
 <header>
-  <p>__________________________</p>
   <h1>Very interesting header</h1>
 </header>
+
+<div class="card">
+<p class="flip" onclick="myFunction()">show more/less</p>
+
+<div id="panel">
+  <p>Hidden content</p>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("panel");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</div>
 
 <div class="card">
 <h2>SOME INFO ABOUT ME:</h2>
