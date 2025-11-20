@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test Website</title>
+    <!--Map Stuff-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+    </script>
+</head>
+
+</script>
+
+<body>
+    <div class="container">
+
+        <header class="item-a">
+            <h4>Welcome to my test website.</h4>
+        </header>
+
+        <main class="item-b">
+            <h1>Main Content</h1>
+            <strong>This is the main content area of the website.</strong>
+            <!--<img src="bg.png" alt="Ai-generated Image">-->
+            <div class="fCard">
+                <h3>Fish</h3>
+                <img size="small" src="fish.jpg" alt="Fish">
+            </div>
+            <strong>Do not forget to buy <mark>milk</mark> today.</strong>
+            <div class="mCard">
+                <div id="map" style="height: 600px; width: 100%;"></div>
+            </div>            
+
+            
+
+            <!--
+        <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+        <p>This is <sup>superscripted</sup> text.</p>
+        -->
+        </main>
+
+        <!--Map initialization script-->
+        <script>
+            var map = L.map('map').setView([0, 0], 2); // default view
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            // Ask the browser for location
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var lat = position.coords.latitude;
+                    var lon = position.coords.longitude;
+
+                    map.setView([lat, lon], 13); // zoom into user location
+                    L.marker([lat, lon]).addTo(map)
+                        .bindPopup("You are here! O_O")
+                        .openPopup();
+                }, function (error) {
+                    alert("Geolocation failed or was denied.");
+                });
+            } else {
+                alert("Geolocation is not supported by your browser.");
+            }
+        </script>
+
+        <aside class="item-c">
+            <p>Sidebar content...</p>
+            <strong>This text is important!</strong>
+            <br>
+            <em>This text is emphasized</em>
+            <br>
+            <div>---------------------------------</div>
+            <div class="card">
+                <h2>SOME INFO ABOUT ME:</h2>
+                <p>Name: Simon Graf</p>
+                <p>Age: 30</p>
+                <p>Location: Austria</p>
+            </div>
+            <!-- Fake Ads -->
+            <script>
+                function showAdPopup(message) {
+                    alert(message);
+                }
+            </script>
+            <div class="ad-box">
+                <h3>Ad Title 1</h3>
+                <p>Buy the best widgets here!</p>
+                <!--<button>Shop Now</button> -->
+                <button onclick="showAdPopup('Nice! You clicked the a fake ad!')">Shop Now</button>
+            </div>
+
+            <div class="ad-box">
+                <h3>Ad Title 2</h3>
+                <p>Special discount for new users!</p>
+                <button onclick="showAdPopup('Noooooooooo!')">Claim Offer</button>
+            </div>
+
+            <div class="ad-box">
+                <h3>Ad Title 3</h3>
+                <p>Learn coding in 30 days!</p>
+                <button onclick="showAdPopup('Not today buddy!!!')">Sign Up</button>
+            </div>
+            <img src="benko.jpg" alt="Ma boy is in trouble">
+        </aside>
+
+        <aside class="item-e">
+            <p>Extra column content...</p>
+            <p>--------------------------------------</p>
+            <div class="box">
+                <h2>A box</h2>
+                <div class="box">
+                    <h2>Another box</h2>
+                    <div class="box">
+                        <h2>And another box</h2>
+                        <div class="box">
+                            <h2>And the last box</h2>
+                            <p>And some text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <footer class="item-d">
+            <p>© 2025 Test Website</p>
+        </footer>
+
+    </div>
+    <script>
+        window.onload = () => window.scrollTo(0, 0);
+    </script>
+</body>
+
+</html>
