@@ -4,13 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Smooth Scrolling with Padding for Fixed Header */
 html {
     scroll-behavior: smooth;
 
     scroll-padding-top: 150px; 
 }
-
+/* Body Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -35,17 +35,17 @@ nav ul {
     justify-content: center;
     padding: 10px;
 }
-
+/* Navigation Links */
 nav ul li {
     margin: 0 15px;
 }
-
+/* Navigation Link Styles */
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
-
+/* Navigation Link Hover Effect */
 nav ul li a:hover {
     color: #11003b;
 }
@@ -59,14 +59,14 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
+/* Sections */
 section {
     margin-bottom: 40px;
     padding-bottom: 20px;
     border-bottom: 1px solid #4f0364;
 }
 
-
+/* Home and About Sections */
 #home, #about {
     display: flex;
     flex-direction: column;
@@ -74,14 +74,14 @@ section {
     text-align: center;
     padding: 40px 0;
 }
-
+/* Gallery */
 .flex-gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
 }
-
+/* Gallery Items */
 .gallery-item {
     flex: 1 1 calc(33.333% - 20px);
     min-width: 200px;
@@ -90,10 +90,12 @@ section {
     border-radius: 10px;
     text-align: center;
 }
+/* Gallery Item Links */
 .gallery-item a {
     text-decoration: none;
     display: block; 
 }
+/* Home Images */
 .home-img {
     width: 100%;
     max-width: 200px;
@@ -104,10 +106,11 @@ section {
     display: block;
     transition: transform 0.3s ease;
 }
-
+/* Home Image Hover Effect */
 .home-img:hover {
     transform: scale(1.1); /* Vergrößert das Bild um 10% beim Hover */
 }
+/* Home Image Cursor */
 .home-img {
     cursor: zoom-in;
 }
@@ -117,15 +120,14 @@ form {
     flex-direction: column;
     max-width: 400px;
 }
-
+/* Contact Form */
 #contact form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: stretch;
 }
-
-
+/* Form Groups */
 @media (min-width: 600px) {
     .form-group {
         display: flex;
@@ -133,14 +135,14 @@ form {
         align-items: center;
     }
 }
-
+/* Form Labels */
 input[type="text"], input[type="email"] {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
+/* Textarea Styles */
 textarea {
     padding: 10px;
     min-height: 100px;
@@ -149,7 +151,7 @@ textarea {
     font-family: inherit;
     resize: vertical;
 }
-
+/* Submit Button Styles */
 input[type="submit"] {
     margin-top: 15px;
     padding: 10px;
@@ -159,7 +161,7 @@ input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
 }
-
+/* Submit Button Hover Effect */
 input[type="submit"]:hover {
     background: #3498db;
 }
@@ -171,12 +173,12 @@ input[type="submit"]:hover {
     align-items: center;
     margin-top: 20px;
 }
-
+/* Contact Image and Form */
 .contact-image, #contact form {
     flex: 1;
     min-width: 300px;
 }
-
+/* Responsive Images */
 .responsive-img {
     width: 100%;
     height: auto;
@@ -214,7 +216,7 @@ footer {
     width: 250px;           
     transition: transform 0.3s ease;
 }
-
+/* Produkt-Bilder */
 .product-img {
     width: 150px; 
     height: 150px;
@@ -222,12 +224,12 @@ footer {
     border-radius: 10px;
     margin-bottom: 15px;
 }
-
+/* Hover-Effekt für Produkt-Karten */
 .product-card:hover {
     transform: translateY(-10px); 
     border-color: #3498db;
 }
-
+/* Produkt-Bilder mit Zoom-Effekt */
 .product-img {
     width: 150px; 
     height: 150px;
@@ -237,10 +239,11 @@ footer {
     cursor: zoom-in; 
     transition: transform 0.3s ease;
 }
-
+/* Hover-Effekt für Produkt-Bilder */
 .product-img:hover {
     transform: scale(1.05);
 }
+/* Kaufen-Button */
 .back-button {
     display: inline-block;
     margin-bottom: 20px;
@@ -252,7 +255,7 @@ footer {
     border: 1px solid #ccc;
     transition: background-color 0.3s;
 }
-
+/* Hover-Effekt für Kaufen-Button */
 .back-button:hover {
     background-color: #e0e0e0;
 }
@@ -264,7 +267,7 @@ footer {
     font-weight: normal;
     font-style: normal;
 }
-
+/* Zweite Schriftart für lesbaren Text */
 @font-face {
     font-family: 'Schrift2';
     src: url('fonts/GoogleSansCode-VariableFont_wght.ttf') format('truetype');
