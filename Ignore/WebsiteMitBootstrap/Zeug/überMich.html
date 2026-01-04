@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+
+ <!-- CSS -->
+
+<style>
+#panel, .flip {
+  padding: 10px;
+  text-align: center;
+  background-color: #5a0075;
+  color: white;
+  border: solid 1px #f6de06;
+  margin: auto;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  cursor: pointer;  
+}
+
+#panel {
+  display: none;
+  cursor: auto;
+}
+body {
+  /* A CSS Comment */
+  background: linear-gradient(135deg, #001e22, #01434e);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  color: #000000;
+}
+
+header {
+  background-color: #00384b;
+  color: rgb(208, 214, 12);
+  box-shadow: 0 6px 20px rgba(48, 0, 78);
+  border: 4px solid rgb(48, 0, 78);
+  margin: 20px;
+  padding: 4px;
+  text-align: center;
+}
+
+.box {
+  background-color: rgba(160, 229, 235, 0.901);
+  color: rgb(0, 0, 0);
+  border: 4px solid rgb(48, 0, 78);
+
+  margin: 20px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  background: linear-gradient(135deg, #a6e8f1, #6af5a6);
+  border-radius: 16px;
+  border: 4px solid rgb(175, 196, 70);
+  box-shadow: 0 6px 20px rgba(255, 255, 0, 0.816);
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Change the link and background color on hover */
+li a:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.card:hover { transform: translateY(-5px); transition: 0.3s ease; }
+.box:hover { transform: translateY(-5px); transition: 0.3s ease; }
+
+</style>
+
+</head>
+
+<body>
+<header>
+  <h1>Very interesting header</h1>
+</header>
+
+<div class="card">
+<p class="flip" onclick="myFunction()">show more/less</p>
+
+<div id="panel">
+  <p>Hidden content</p>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("panel");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</div>
+
+<div class="card">
+<h2>SOME INFO ABOUT ME:</h2>
+<p>Name: Simon Graf</p>
+<p>Age: 30</p>
+<p>Location: Austria</p>
+</div>
+
+<div class="box">
+<h2>A box</h2>
+	<div class="box">
+    <h2>Another box</h2>
+    	<div class="box">
+        <h2>And another box</h2>
+        	<div class="box">
+				    <h2>And the last box</h2>
+				    <p>And some text</p>
+			    </div>
+       	</div>
+    </div>
+</div> 
+
+
+
+</body>
+</html>

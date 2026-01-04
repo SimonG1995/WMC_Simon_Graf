@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>WILKOMMEN</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#bilder">Bilder</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Hallo! Der Shop ist eine separate Seite.</p>
+        </section>
+        <section id="about">
+            <h2>Über uns:</h2>
+            <p>Wir sind eine moderne und innovative Firma, die sich auf hochwertige Produkte und Dienstleistungen spezialisiert hat.</p>
+        </section>
+<section id="bilder">
+    <h2>Bilder</h2>
+    <div class="flex-gallery">
+        <div class="gallery-item">
+            <img src="images/ghost.png" alt="Ghost" class="home-img" onclick="openLightbox(this.src)">
+            <p>Ein Bild</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/monlis.png" alt="Monalisa" class="home-img" onclick="openLightbox(this.src)">
+            <p>Noch ein Bild</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/neo.png" alt="Neo" class="home-img" onclick="openLightbox(this.src)">
+            <p>Das letzte Bild</p>
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="Großansicht">
+</div>
+<section id="contact">
+    <h2>Kontakt:</h2>
+    <p>Schreibe uns!</p>
+
+    <div class="contact-wrapper">
+        <div class="contact-image">
+            <img src="images/support.png" alt="Kontakt Bild" class="responsive-img">
+        </div>
+
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message"></textarea>
+            
+            <input type="submit" value="Senden">
+        </form>
+    </div>
+</section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Website. All rights and lefts reserved.</p>
+    </footer>
+</body>
+</html>   
+
+    

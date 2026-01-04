@@ -59,7 +59,7 @@ body {
 
 /* Responsive image */
 .item-b img {
-    width: 100%;
+    width: 50%;
     max-width: 400px; /* or any size you want */
     height: auto;
     display: block;
